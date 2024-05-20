@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StyleSheet } from 'react-native'; 
 import Login from './Screens/LoginScreens';
 import Register from './Screens/RegisterScreens'; 
+import Home from './AdminScreens/Home';
 
 const Stack = createStackNavigator();
 

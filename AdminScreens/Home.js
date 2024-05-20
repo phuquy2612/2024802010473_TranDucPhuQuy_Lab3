@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 
 const HomeScreen = ({ navigation, route }) => {
     const [services, setServices] = useState([]);
-    const [username, setUsername] = useState('John Doe'); // Set a default username
+    const [username, setUsername] = useState('Phu Quy'); // Set a default username
 
     // Mock data to simulate services
     const mockServices = [
@@ -77,7 +77,7 @@ const Home = ({ route }) => {
                 initialParams={route.params}
             />
             <Stack.Screen name="Profile" component={Profile} />
-            <Stack.Screen name="AddNewServices" component={AddNewServices} />
+            <Stack.Screen name="AddnewServices" component={AddNewServices} />
             <Stack.Screen name="ServiceDetails" component={ServiceDetails} />
         </Stack.Navigator>
     );
