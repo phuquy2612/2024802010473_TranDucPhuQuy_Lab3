@@ -1,17 +1,23 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { StyleSheet } from 'react-native'; // Import StyleSheet
-import Login from './Screens/LoginScreens'; // Import the Login component
+import { createStackNavigator } from '@react-navigation/stack';
+import { StyleSheet } from 'react-native'; 
+import Login from './Screens/LoginScreens';
+import Register from './Screens/RegisterScreens'; 
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Login /> {/* Render the Login component directly */}
+      <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
+                <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="Register" component={Register} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
-// Define styles using StyleSheet.create inside the component
 const styles = StyleSheet.create({
   container: {
     flex: 1,
